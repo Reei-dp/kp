@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f99092e2350c410fab460474c358196e" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="Model.accounts" Width="1.5" PointX="0.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.marks" Width="1.5" PointX="8.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.students" Width="1.875" PointX="2.625" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.subjects" Width="1.5" PointX="6.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.teachers" Width="2.125" PointX="3.625" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector ManuallyRouted="false" Association="Model.FK__students__id_use__2F10007B" />
+        <AssociationConnector ManuallyRouted="false" Association="Model.FK__teachers__id_use__300424B4" />
+        <AssociationConnector Association="Model.FK__marks__id_studen__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__marks__id_subjec__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__subjects__id_tea__2E1BDC42" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

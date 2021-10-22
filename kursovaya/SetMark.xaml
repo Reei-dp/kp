@@ -1,0 +1,28 @@
+﻿<Page x:Class="kursovaya.SetMark"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursovaya"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="SetMark">
+
+    <Grid Background="Azure">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="300"/>
+            
+        </Grid.RowDefinitions>
+
+        <Label Content="Оценка:" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox FontSize="40" Grid.Row="0" Grid.Column="1" Width="100" Height="55" Text="{Binding mark}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40"/>
+        <Button Click="SaveBtn_Click" Content="Сохранить" Height="70" Width="300" FontSize="40" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" />
+        
+    </Grid>
+</Page>

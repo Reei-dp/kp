@@ -1,0 +1,43 @@
+﻿<Page x:Class="kursovaya.StudentList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursovaya"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      WindowHeight="1080" WindowWidth="1920"
+      Title="StudentList" >
+
+    <Grid Background="Azure">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Grid.Row="1" x:Name="DGridStudentList" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер занятия" Binding="{Binding lesson_number}"/>
+                <DataGridTextColumn Header="Дата занятия" Binding="{Binding lesson_date}" Width="150"/>
+                <DataGridTextColumn Header="Оценка" Binding="{Binding mark}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+        
+        <Label Content="Ученик:" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Margin="0,0,1000,0" Name="Name" Width="350" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Margin="0,0,450,0" Content="Класс:" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Margin="0,0,200,0" Name="Class" Width="120" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,30,0" VerticalAlignment="Center">
+            <Label Content="Предмет:" FontSize="25"/>
+            <ComboBox SelectionChanged="ComboSubject_SelectionChanged" x:Name="ComboSubject" DisplayMemberPath="title" Width="150" Height="50" FontSize="25"/>
+            <Label Content="Семестр:" FontSize="25" />
+            <ComboBox SelectionChanged="ComboSemester_SelectionChanged" x:Name="ComboSemester" Width="150" Height="50" FontSize="25"/>
+        </StackPanel>
+
+    </Grid>
+</Page> 
